@@ -1,0 +1,23 @@
+{
+  "name": "detect-rename",
+  "version": "0.0.1",
+  "description": "Detect file renames based on the file contents",
+  "homepage": "http://github.com/nknapp/detect-rename",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nknapp/detect-rename.git"
+  },
+  "dependencies": {
+    "string-similarity": "^1.0.0"
+  },
+  "main": "src/detect-rename.js",
+  "scripts": {
+    "test": "./node_modules/nodeunit/bin/nodeunit testsrc/"
+  },
+  "devDependencies": {
+    "long-stack-traces": "^0.1.2",
+    "nodeunit": "^0.9.0"
+  },
+  "author": "Nils Knappmeier <npm@knappi.org> (http://www.knappi.org)",
+  "license": "MIT"
+}
