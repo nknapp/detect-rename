@@ -12,6 +12,7 @@ module.exports.testDetect = function(test) {
         "cdef": "Lorem ipsum sit incro",
         "qwertz": "poiu"
     });
+    console.log(renames);
     test.deepEqual(renames["cde"],{ to: 'cdef', sim: 1 });
     test.deepEqual(renames["abc"],{ to: 'abcd', sim: 0.9629629629629629 });
     test.done();

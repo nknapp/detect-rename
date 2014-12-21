@@ -5,11 +5,13 @@ var sim = require("string-similarity");
  * @param target object containing the target strings (name -> contents)
  * @param options {object} options for the function
  * @param [options.threshold] {number} lower similarity threshold for what is considered "equal".
+ * @param [options.debugInfo] {string} name of a property that is inserted in the result to include debugging information.
  *
  */
 function detectRenames(source,target,options) {
     options = defaults(options,{
-        threshold: 0.5
+        threshold: 0.5,
+        debugInfo: null
     });
 
     // Find added and removed strings
@@ -51,7 +53,9 @@ function detectRenames(source,target,options) {
             usedTargets[rename.to] = rename.from;
         }
     });
-    results._possible = possibleRenames;
+    if (options.debugInfo) {
+        results[options.debugInfo] = possibleRenames;
+    }
     return results;
 }
 
