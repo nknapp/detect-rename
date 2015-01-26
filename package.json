@@ -1,6 +1,6 @@
 {
   "name": "detect-rename",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Detect file renames based on the file contents",
   "homepage": "http://github.com/nknapp/detect-rename",
   "repository": {
