@@ -25,7 +25,7 @@ console.log(detect({
 ```
 
 Output:
-```
+```js
 {
 cde: { to: 'cdef', sim: 1 },
 abc: { to: 'abcd', sim: 0.9629629629629629 }
