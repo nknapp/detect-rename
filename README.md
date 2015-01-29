@@ -27,8 +27,8 @@ console.log(detect({
 Output:
 ```js
 {
-cde: { to: 'cdef', sim: 1 },
-abc: { to: 'abcd', sim: 0.9629629629629629 }
+cdef: { from: 'cde', sim: 1 },
+abcd: { from: 'abc', sim: 0.9629629629629629 }
 }
 ```
 
@@ -40,6 +40,10 @@ Changes
 
 ####0.0.1
   * Initial checkin
+
+####0.1.0
+  * Changed the output to use the target file as object key. This is more useful, because this is what the target file is like in the
+    currently.
 
 
 

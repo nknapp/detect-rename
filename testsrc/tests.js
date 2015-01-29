@@ -13,7 +13,7 @@ module.exports.testDetect = function(test) {
         "qwertz": "poiu"
     });
     console.log(renames);
-    test.deepEqual(renames["cde"],{ to: 'cdef', sim: 1 });
-    test.deepEqual(renames["abc"],{ to: 'abcd', sim: 0.9629629629629629 });
+    test.deepEqual(renames['cdef'],{ from: 'cde', sim: 1 });
+    test.deepEqual(renames['abcd'],{ from: 'abc', sim: 0.9629629629629629 });
     test.done();
 };

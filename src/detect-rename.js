@@ -35,7 +35,7 @@ function detectRenames(source,target,options) {
             }
         });
     });
-    var usedTargets = {},
+    var usedSources = {},
         results = {};
 
     // Gather actual results by examining renames, starting with the most similar
@@ -44,13 +44,13 @@ function detectRenames(source,target,options) {
     });
 
     possibleRenames.forEach(function(rename) {
-        if (!results.hasOwnProperty(rename.from) && !usedTargets.hasOwnProperty(rename.to)) {
-            results[rename.from] = {
-                to: rename.to,
+        if (!results.hasOwnProperty(rename.to) && !usedSources.hasOwnProperty(rename.from)) {
+            results[rename.to] = {
+                from: rename.from,
                 sim: rename.sim
 
             };
-            usedTargets[rename.to] = rename.from;
+            usedSources[rename.from] = rename.to;
         }
     });
     if (options.debugInfo) {
